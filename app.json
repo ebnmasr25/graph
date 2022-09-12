@@ -1,0 +1,37 @@
+{
+    "name": "TelegraphBot",
+    "description": "Powerful Telegram bot to generate Telegraph link ⚠️ Dont work at Groups ..",
+    "repository": "https://github.com/ebnmasr25/graph",
+    "keywords": [
+        "telegraph",
+        "telegraph link",
+        "generate telegraph links",
+        "media to telegraph link",
+        "telegram bot to generate telegraph links",
+        "bot to upload media to telegraph",
+        "Telegram bot",
+        "Pyrogram bot"
+    ],
+    "env": {
+        "API_ID": {
+            "description": "يمكنك الحصول عليه من  my.telegram.org/apps"
+        },
+        "API_HASH": {
+            "description": " يمكنك الحصول عليه من my.telegram.org/apps"
+        },
+        "BOT_TOKEN": {
+            "description": "يمكنك الحصول عليه من  Telegram's @BotFather"
+        }
+    },
+    "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
