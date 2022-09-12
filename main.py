@@ -13,13 +13,14 @@ api_id = int(os.environ["API_ID"]),
 api_hash = os.environ["API_HASH"],
 bot_token = os.environ["BOT_TOKEN"]
 )
+CHANNEL = "pyth_on1"
 
 
 @app.on_message(filters.command("start") & filters.private)
 async def start(client: Client, message: Message):
        m = message.chat.id
        user = message.from_user.mention
-       do = requests.get(f"https://api.telegram.org/bot{app_token}/getChatMember?chat_id=@{CHANNEL}&user_id={message.from_user.id}").text
+       do = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{CHANNEL}&user_id={message.from_user.id}").text
        if do.count("left") or do.count("Bad Request: user not found"):
           await message.reply_text(f"**Join [this channel](t.me/{CHANNEL}) first to be able to use the app ✨**", disable_web_page_preview=True,
           reply_markup=InlineKeyboardMarkup(
