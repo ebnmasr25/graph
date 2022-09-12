@@ -15,7 +15,7 @@ bot_token = os.environ["BOT_TOKEN"]
 )
 CHANNEL = "pyth_on1"
 
-
+BOT_TOKEN = "5467036956:AAGrQ79CvZwzohF16ZomQcx9yazAHOY1YME"
 @app.on_message(filters.command("start") & filters.private)
 async def start(client: Client, message: Message):
        m = message.chat.id
